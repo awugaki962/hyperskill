@@ -12,8 +12,8 @@
           <option name="moduleName" value="Problems-Motor_static_factory" />
           <option name="friendPaths">
             <array>
-              <option value="$MODULE_DIR$/../../../../Problems/Motor static factory/build/classes/java/main" />
               <option value="$MODULE_DIR$/../../../../Problems/Motor static factory/build/classes/kotlin/main" />
+              <option value="$MODULE_DIR$/../../../../Problems/Motor static factory/build/classes/java/main" />
             </array>
           </option>
           <option name="languageVersion" value="1.3" />

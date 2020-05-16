@@ -12,8 +12,8 @@
           <option name="moduleName" value="Problems-Triples" />
           <option name="friendPaths">
             <array>
-              <option value="$MODULE_DIR$/../../../../Problems/Triples/build/classes/java/main" />
               <option value="$MODULE_DIR$/../../../../Problems/Triples/build/classes/kotlin/main" />
+              <option value="$MODULE_DIR$/../../../../Problems/Triples/build/classes/java/main" />
             </array>
           </option>
           <option name="languageVersion" value="1.3" />

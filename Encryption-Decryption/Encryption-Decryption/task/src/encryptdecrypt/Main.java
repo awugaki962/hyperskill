@@ -12,19 +12,19 @@ class Project {
     }
 
     public void run(String mode, String data, int key) {
-        
-        data = standardizeData(data);
+        //standardize the data
+        data = finalizeData(data);
 
         if ("shift".equals(method)) {
             if ("enc".equals(mode)) {
                 new Shift().encode(data, key);
-            } else {
+            } else  {
                 new Shift().decode(data, key);
             }
         } else if ("unicode".equals(method)) {
             if ("enc".equals(mode)) {
                 new Unicode().encode(data, key);
-            } else {
+            } else  {
                 new Unicode().decode(data, key);
             }
         } else {
@@ -42,7 +42,7 @@ class Project {
         return Main.data;
     }
 
-    public String standardizeData(String data) {
+    public String finalizeData(String data) {
         if (!"".equals(Main.inData) || "".equals(data)) {
             return fileReading(Main.inData);
         }

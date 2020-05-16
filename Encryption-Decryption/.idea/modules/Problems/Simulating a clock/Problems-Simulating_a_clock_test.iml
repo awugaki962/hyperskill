@@ -12,8 +12,8 @@
           <option name="moduleName" value="Problems-Simulating_a_clock" />
           <option name="friendPaths">
             <array>
-              <option value="$MODULE_DIR$/../../../../Problems/Simulating a clock/build/classes/java/main" />
               <option value="$MODULE_DIR$/../../../../Problems/Simulating a clock/build/classes/kotlin/main" />
+              <option value="$MODULE_DIR$/../../../../Problems/Simulating a clock/build/classes/java/main" />
             </array>
           </option>
           <option name="languageVersion" value="1.3" />
