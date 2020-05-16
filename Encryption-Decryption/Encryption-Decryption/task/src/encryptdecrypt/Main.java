@@ -145,8 +145,7 @@ class Unicode extends UtilityClass {
 }
 
 public class Main {
-
-
+    //setting up the constants and the variables, what we're waiting from the input
     private static final String MODE = "-mode";
     protected static String mode = "enc";
     private static final String KEY = "-key";
