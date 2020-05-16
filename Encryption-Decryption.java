@@ -5,53 +5,34 @@ import java.io.FileWriter;
 import java.util.Scanner;
 
 class Project {
-    private String method;
+    private final String method;
 
     public Project(String method) {
         this.method = method;
     }
 
     public void run(String mode, String data, int key) {
-        switch (method) {
-            case "shift":
-                if (mode.equals("enc")) {
-                //Ha nem lett megadva a bemeneti fájl, vagy az adat meg lett adva manuálisan
-                    if (Main.inData.equals("") || !data.equals("")) {
-                        Shift.encode(data, key);
-                    } else {
-                        String fromFile = fileReading(Main.inData);
-                        Shift.encode(fromFile, key);
-                    }
-                } else {
-                    if (Main.inData.equals("") || !data.equals("")) {
-                        Shift.decode(data, key);
-                    } else {
-                        String fromFile = fileReading(Main.inData);
-                        Shift.decode(fromFile, key);
-                    }
-                }
-                break;
-            case "unicode":
-                if (mode.equals("enc")) {
-                    if (Main.inData.equals("") || !data.equals("")) {
-                        Unicode.encode(data, key);
-                    } else {
-                        String fromFile = fileReading(Main.inData);
-                        Unicode.encode(fromFile, key);
-                    }
-                } else {
-                    if (Main.inData.equals("") || !data.equals("")) {
-                        Unicode.decode(data, key);
-                    } else {
-                        String fromFile = fileReading(Main.inData);
-                        Unicode.decode(fromFile, key);
-                    }
-                }
-                break;
+        
+        data = standardizeData(data);
+
+        if ("shift".equals(method)) {
+            if ("enc".equals(mode)) {
+                new Shift().encode(data, key);
+            } else {
+                new Shift().decode(data, key);
+            }
+        } else if ("unicode".equals(method)) {
+            if ("enc".equals(mode)) {
+                new Unicode().encode(data, key);
+            } else {
+                new Unicode().decode(data, key);
+            }
+        } else {
+            System.out.println("Error occured in the algorithm choosing part!");
         }
     }
 
-    public static String fileReading(String inData) {
+    public String fileReading(String inData) {
         File file = new File(inData);
         try (Scanner fileRead = new Scanner(file)) {
             Main.data = fileRead.nextLine();
@@ -61,7 +42,21 @@ class Project {
         return Main.data;
     }
 
-    public static void fileWriting(String result) {
+    public String standardizeData(String data) {
+        if (!"".equals(Main.inData) || "".equals(data)) {
+            return fileReading(Main.inData);
+        }
+        return data;
+    }
+}
+
+abstract class UtilityClass {
+
+    public abstract void encode(String str, int mod);
+
+    public abstract void decode(String str, int mod);
+
+    public void fileWriting(String result) {
         File file = new File(Main.outData);
         try (FileWriter write = new FileWriter(file)) {
             write.write(result);
@@ -70,25 +65,30 @@ class Project {
         }
     }
 
+    public void output(String result) {
+        if ("".equals(Main.outData)) {
+            System.out.println(result);
+        } else {
+            fileWriting(result);
+        }
+    }
 }
 
-class Shift {
-    static String abc = "abcdefghijklmnopqrstuvwxyz";
-    static char currentChar;
-    static String result = "";
+class Shift extends UtilityClass {
+    String abc = "abcdefghijklmnopqrstuvwxyz";
+    char currentChar;
+    String result = "";
 
-    public static void encode(String str, int mod) {
+    public void encode(String str, int mod) {
         for (int i = 0; i < str.length(); i++) {
             for (int j = 0; j < abc.length(); j++) {
                 currentChar = str.charAt(i);
-                //Ha az aktuális karakter nagybetű
-                if (currentChar > 64 && currentChar < 91) {
+                if (currentChar >= 'A' && currentChar <= 'Z') {
                     abc = abc.toUpperCase();
                 } else {
                     abc = abc.toLowerCase();
                 }
-                Ha az aktuális karakter nincs a megadott abc-ben
-                if (currentChar < 65) {
+                if (currentChar < 'A') {
                     result = result + currentChar;
                     break;
                 }
@@ -102,21 +102,20 @@ class Shift {
         output(result);
     }
 
-    public static void decode(String str, int mod) {
+    public void decode(String str, int mod) {
         for (int i = 0; i < str.length(); i++) {
             for (int j = 0; j < abc.length(); j++) {
                 currentChar = str.charAt(i);
-                if (currentChar > 64 && currentChar < 91) {
+                if (currentChar >= 'A' && currentChar <= 'Z') {
                     abc = abc.toUpperCase();
                 } else {
                     abc = abc.toLowerCase();
                 }
-                if (currentChar < 65) {
+                if (currentChar < 'A') {
                     result = result + currentChar;
                     break;
                 }
                 if (str.substring(i, i + 1).equals(abc.substring(j, j + 1))) {
-                //Ha az eltolás miatt nem fér bele az abc hosszúságába (lásd -4 % 26 == -4)
                     int fract = (j - mod) % abc.length() < 0 ? 26 + (j - mod) % abc.length() : (j - mod) % abc.length();
                     result = result + abc.substring(fract, fract + 1);
                     break;
@@ -125,74 +124,67 @@ class Shift {
         }
         output(result);
     }
-
-    public static void output(String result) {
-        if (Main.outData.equals("")) {
-            System.out.println(result);
-        } else {
-            Project.fileWriting(result);
-        }
-    }
 }
 
-class Unicode{
-    static String result = "";
+class Unicode extends UtilityClass {
+    private String result = "";
 
-    public static void encode(String str, int mod) {
+    public void encode(String str, int mod) {
         for (char c : str.toCharArray()) {
             result += (char) (c + mod);
         }
         output(result);
     }
 
-    public static void decode(String str, int mod) {
+    public void decode(String str, int mod) {
         for (char c : str.toCharArray()) {
             result += (char) (c - mod);
         }
         output(result);
     }
-
-    public static void output(String result) {
-        if (Main.outData.equals("")) {
-            System.out.println(result);
-        } else {
-            Project.fileWriting(result);
-        }
-    }
 }
 
 public class Main {
 
-    static String mode = "enc";
-    static int key = 0;
-    static String data = "";
-    static String inData = "";
-    static String outData = "";
-    static String algorithm = "shift";
+
+    private static final String MODE = "-mode";
+    protected static String mode = "enc";
+    private static final String KEY = "-key";
+    protected static int key = 0;
+    private static final String DATA = "-data";
+    protected static String data = "";
+    private static final String INDATA = "-in";
+    protected static String inData = "";
+    private static final String OUTDATA = "-out";
+    protected static String outData = "";
+    private static final String ALG = "-alg";
+    protected static String algorithm = "shift";
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        for (int i = 0; i < args.length; i++) {
+        for (int i = 0; i < args.length; i += 2) {
+            String argumentum = args[i + 1].toLowerCase();
             switch (args[i]) {
-                case "-mode":
-                    mode = args[i + 1];
+                case MODE:
+                    mode = argumentum;
                     break;
-                case "-key":
-                    key = Integer.parseInt(args[i + 1]);
+                case KEY:
+                    key = Integer.parseInt(argumentum);
                     break;
-                case "-data":
-                    data = args[i + 1];
+                case DATA:
+                    data = argumentum;
                     break;
-                case "-in":
-                    inData = ".\\" + args[i + 1];
+                case INDATA:
+                    inData = "." + File.separator + argumentum;
                     break;
-                case "-out":
-                    outData = ".\\" + args[i + 1];
+                case OUTDATA:
+                    outData = "." + File.separator + argumentum;
                     break;
-                case "-alg":
-                    algorithm = args[i + 1];
+                case ALG:
+                    algorithm = argumentum;
                     break;
+                default:
+                    System.out.println("Incompatible parameters!");
             }
         }
 
