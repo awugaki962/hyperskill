@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Encryption-Decryption/task/Encryption-Decryption-task.iml" filepath="$PROJECT_DIR$/.idea/modules/Encryption-Decryption/task/Encryption-Decryption-task.iml" group="Encryption-Decryption3/Encryption-Decryption-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Encryption-Decryption/task/Encryption-Decryption-task_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Encryption-Decryption/task/Encryption-Decryption-task_main.iml" group="Encryption-Decryption3/Encryption-Decryption-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Encryption-Decryption/task/Encryption-Decryption-task_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Encryption-Decryption/task/Encryption-Decryption-task_test.iml" group="Encryption-Decryption3/Encryption-Decryption-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Encryption-Decryption3.iml" filepath="$PROJECT_DIR$/.idea/modules/Encryption-Decryption3.iml" group="Encryption-Decryption3" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Number of occurrences/Problems-Number_of_occurrences.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Number of occurrences/Problems-Number_of_occurrences.iml" group="Encryption-Decryption3/Problems-Number_of_occurrences" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Number of occurrences/Problems-Number_of_occurrences_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Number of occurrences/Problems-Number_of_occurrences_main.iml" group="Encryption-Decryption3/Problems-Number_of_occurrences" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Number of occurrences/Problems-Number_of_occurrences_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Number of occurrences/Problems-Number_of_occurrences_test.iml" group="Encryption-Decryption3/Problems-Number_of_occurrences" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util.iml" group="Encryption-Decryption3/util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util_main.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util_main.iml" group="Encryption-Decryption3/util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util_test.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util_test.iml" group="Encryption-Decryption3/util" />
+    </modules>
+  </component>
+</project>

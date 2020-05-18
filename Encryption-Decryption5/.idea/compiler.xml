@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="Encryption-Decryption-task_main" target="11" />
+      <module name="Encryption-Decryption-task_test" target="11" />
+      <module name="Problems-The_count_of_numbers_divisible_by_N_main" target="11" />
+      <module name="Problems-The_count_of_numbers_divisible_by_N_test" target="11" />
+      <module name="Problems__10_-Maximum_sequence_of_the_same_characters_main" target="11" />
+      <module name="Problems__10_-Maximum_sequence_of_the_same_characters_test" target="11" />
+      <module name="Problems__11_-The_sequence_main" target="11" />
+      <module name="Problems__11_-The_sequence_test" target="11" />
+      <module name="Problems__12_-The_index_of_an_argument_main" target="11" />
+      <module name="Problems__12_-The_index_of_an_argument_test" target="11" />
+      <module name="Problems__13_-Calculator_-_2_main" target="11" />
+      <module name="Problems__13_-Calculator_-_2_test" target="11" />
+      <module name="Problems__1_-The_count_of_numbers_divisible_by_N_main" target="11" />
+      <module name="Problems__1_-The_count_of_numbers_divisible_by_N_test" target="11" />
+      <module name="Problems__2_-Fixing_the_main_method_main" target="11" />
+      <module name="Problems__2_-Fixing_the_main_method_test" target="11" />
+      <module name="Problems__3_-Fixing_the_main_method_main" target="11" />
+      <module name="Problems__3_-Fixing_the_main_method_test" target="11" />
+      <module name="Problems__4_-Print__We_are_robots!_main" target="11" />
+      <module name="Problems__4_-Print__We_are_robots!_test" target="11" />
+      <module name="Problems__5_-Print_strings_in_the_reverse_order_main" target="11" />
+      <module name="Problems__5_-Print_strings_in_the_reverse_order_test" target="11" />
+      <module name="Problems__6_-Adding_values_main" target="11" />
+      <module name="Problems__6_-Adding_values_test" target="11" />
+      <module name="Problems__7_-Adding_values_main" target="11" />
+      <module name="Problems__7_-Adding_values_test" target="11" />
+      <module name="Problems__8_-Inverse_boolean_flags_main" target="11" />
+      <module name="Problems__8_-Inverse_boolean_flags_test" target="11" />
+      <module name="Problems__9_-Get_first_and_last_elements_main" target="11" />
+      <module name="Problems__9_-Get_first_and_last_elements_test" target="11" />
+      <module name="util_main" target="11" />
+      <module name="util_test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

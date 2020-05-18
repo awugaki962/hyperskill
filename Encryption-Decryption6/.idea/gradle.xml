@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Encryption-Decryption/task" />
+            <option value="$PROJECT_DIR$/Problems (1)/The lucky ticket" />
+            <option value="$PROJECT_DIR$/Problems (10)/Profit" />
+            <option value="$PROJECT_DIR$/Problems (11)/Are siblings" />
+            <option value="$PROJECT_DIR$/Problems (12)/Extracting a substring" />
+            <option value="$PROJECT_DIR$/Problems (13)/Project constants and methods" />
+            <option value="$PROJECT_DIR$/Problems (14)/Too many cats" />
+            <option value="$PROJECT_DIR$/Problems (15)/Snail" />
+            <option value="$PROJECT_DIR$/Problems (16)/Find mistake" />
+            <option value="$PROJECT_DIR$/Problems (2)/Find the first occurrence of the word  the" />
+            <option value="$PROJECT_DIR$/Problems (3)/Maximum element divisible by 4" />
+            <option value="$PROJECT_DIR$/Problems (4)/Double characters" />
+            <option value="$PROJECT_DIR$/Problems (5)/Symmetrical number" />
+            <option value="$PROJECT_DIR$/Problems (6)/Division" />
+            <option value="$PROJECT_DIR$/Problems (7)/String to double conversion" />
+            <option value="$PROJECT_DIR$/Problems (8)/Catching some exceptions" />
+            <option value="$PROJECT_DIR$/Problems (9)/Converting and multiplying" />
+            <option value="$PROJECT_DIR$/Problems/Account Service" />
+            <option value="$PROJECT_DIR$/Problems/Calculator - 2" />
+            <option value="$PROJECT_DIR$/Problems/Circle" />
+            <option value="$PROJECT_DIR$/Problems/Compact strings with AsciiCharSequence" />
+            <option value="$PROJECT_DIR$/Problems/Direction" />
+            <option value="$PROJECT_DIR$/Problems/Floor-space of the room" />
+            <option value="$PROJECT_DIR$/Problems/Guest list of a hotel" />
+            <option value="$PROJECT_DIR$/Problems/Mutable geometric shapes" />
+            <option value="$PROJECT_DIR$/Problems/Publication and its subclasses" />
+            <option value="$PROJECT_DIR$/Problems/Test learners" />
+            <option value="$PROJECT_DIR$/Problems/The sequence" />
+            <option value="$PROJECT_DIR$/util" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
